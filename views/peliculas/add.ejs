@@ -1,0 +1,15 @@
+<%- include('../includes/head.ejs') %>
+
+<h1 class="title">Registro de películas</h1>
+<form action="/peliculas/add" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+    <label for="nombre">Nombre de la película</label>
+    <input id="nombre" name="nombre" class="input" type="text" placeholder="Oppenheimer">
+    <br><br>
+    <label for="sinopsis">Sinapsis de la película</label>
+    <textarea id="sinopsis" name="sinopsis" class="textarea" placeholder="La historia de la bomba atómica"></textarea>
+    <br>
+    <input id="registrar" name="registrar" type="submit" value="Registrar" class="button is-info">
+</form>
+
+<%- include('../includes/foot.ejs') %>

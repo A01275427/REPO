@@ -1,0 +1,43 @@
+body {
+    margin: 0 auto;
+    max-width: 50em;
+    font-family: "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    padding: 4em 1em;
+    color: #555;
+}
+
+h1,
+h2,
+strong {
+    color: #333;
+}
+
+h1 {
+    color: black;
+}
+
+h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+td {
+    color: blueviolet;
+}
+
+.favorito {
+    text-emphasis: filled red;
+}
+
+#Oppenheimer {
+    color: orangered;
+}
+
+#Oppenheimer:hover {
+    color: yellow;
+}
+
+a {
+    color: #e81c4f;
+}

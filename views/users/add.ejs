@@ -1,0 +1,31 @@
+<%- include('../includes/head.ejs') %>
+
+<h1 class="title">Registra tu usuario (es gratis)</h1>
+
+<% if(error) { %>
+    <article class="message is-warning">
+        <div class="message-header">
+            <p>Falla en la matrix</p>
+            <button class="delete" aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+            <strong><%= error.sqlMessage %></strong>.
+        </div>
+    </article>
+<% } %>
+
+<form action="/users/add" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+    <label for="nombre">Nombre completo:</label>
+    <input id="nombre" name="nombre" class="input is-primary" type="text" placeholder="Eduardo Daniel Juárez Pineda">
+    <br><br>
+    <label for="username">Nombre de usuario:</label>
+    <input id="username" name="username" class="input is-primary" type="text" placeholder="edjuarezp">
+    <br><br>
+    <label for="password">Password:</label>
+    <input id="password" name="password" class="input is-primary" type="password" placeholder="*****">
+    <br><br>
+    <input class="button is-primary" type="submit" value="Entrar">
+</form>
+
+<%- include('../includes/foot.ejs') %>

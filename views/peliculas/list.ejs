@@ -1,0 +1,42 @@
+<%- include('../includes/head.ejs') %>
+
+<h1 class="title">Películas</h1>
+<div class="columns">
+    <% if (peliculas.length > 0) { %>
+        <% for(let pelicula of peliculas) { %>
+            <div class="column">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="<%= pelicula.imagen %>" alt="<%= pelicula.nombre %>">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="<%= pelicula.imagen %>" alt="<%= pelicula.nombre %>">
+                            </figure>
+                            </div>
+                            <div class="media-content">
+                            <p class="title is-4"><a href="/peliculas/<%= pelicula.id %>"><%= pelicula.nombre %></a></p>
+                            </div>
+                        </div>
+                    
+                        <div class="content">
+                            <%= pelicula.sinopsis %>
+                            <br>
+                            <button class="button is-danger is-rounded" onclick=quitar("<%= pelicula.nombre %>")>Quitar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    <% } else { %>
+        <h2>No hay películas registradas.</h2>
+    <% } %>
+</div>
+
+Tiempo desde el último acceso: <%= tiempo_transcurrido %> segundos.
+
+<%- include('../includes/foot.ejs') %>
