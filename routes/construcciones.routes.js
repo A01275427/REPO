@@ -4,6 +4,7 @@ const construccionesController = require('../controllers/construcciones.controll
 
 router.get('/construir', construccionesController.get_construir);
 router.post('/construir', construccionesController.post_construir);
+router.get('/:construccion_id', construccionesController.get_root);
 router.get('/', construccionesController.get_root);
 
 module.exports = router;
