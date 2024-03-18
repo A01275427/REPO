@@ -3,6 +3,7 @@ const Construccion = require('../models/construccion.model');
 exports.get_construir = (request, response, next) => {
     response.render('construir', {
         username: request.session.username || '',
+        csrfToken: request.csrfToken(),
     }); 
 };
 
