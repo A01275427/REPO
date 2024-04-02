@@ -1,14 +1,25 @@
 {
-  "name": "lalo",
+  "name": "minecraft",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Proyecto compañero del curso TC2005B grupo 2",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/ejuarez/minecraft.git"
+  },
+  "keywords": [
+    "tc2005b"
+  ],
+  "author": "Eduardo Juarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://bitbucket.org/ejuarez/minecraft/issues"
+  },
+  "homepage": "https://bitbucket.org/ejuarez/minecraft#readme",
   "devDependencies": {
     "nodemon": "^3.1.0"
   },
